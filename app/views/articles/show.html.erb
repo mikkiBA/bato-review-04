@@ -1,0 +1,64 @@
+<h2>作品概要</h2>
+
+<p>
+  <strong>作品名:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>紹介文:</strong>
+  <%= @article.text %>
+</p>
+
+<p>
+  <strong>スター平均:</strong>
+
+</p>
+
+<h2>レビュー</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>投稿者:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>レビュー:</strong>
+    <%= comment.body %>
+  </p>
+
+  <p>
+    <strong>スター:</strong>
+    <%= comment.restars %>
+  </p>
+
+  <p>
+    <%= link_to 'レビュー削除', [comment.article, comment],
+                 method: :delete,
+                 data: { confirm: '本当にこのレビューを削除しますか？' } %>
+  </p>
+  <br>------------------<br>
+
+<% end %>
+
+<h2>レビューを投稿する:</h2>
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :投稿者 %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :レビュー内容 %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.label :スター数 %><br>
+    <%= form.number_field :restars, min: 1, max: 5 %>
+  </p>
+
+  <p>
+    <%= form.submit "投稿"%>
+  </p>
+<% end %>
+
+<%= link_to '一覧へ戻る', articles_path %>
