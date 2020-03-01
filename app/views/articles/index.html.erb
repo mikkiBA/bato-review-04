@@ -2,13 +2,13 @@
   <h3>作品一覧</h3>
 </div>
 
-<table>
+<table class="tablesize">
   <tr>
     <table border="3">
-    <th>作品名</th>
-    <th>紹介文</th>
-    <th>投稿時間</th>
-    <th colspan="3">アクションボタン</th>
+    <th class="作品名">作品名</th>
+    <th class="紹介文">紹介文</th>
+    <th class="投稿時間">投稿時間</th>
+    <th colspan="3", class="アクションボタン">アクションボタン</th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -19,25 +19,25 @@
        <td><%= link_to '閲覧/レビュー追加', article_path(article) %></td>
        <td><%= link_to '編集', edit_article_path(article) %></td>
        <td><%= link_to '削除', article_path(article),
-                    method: :delete, data: { confirm: '作品概要、またそれに紐づくレビューを全て削除してもよろしいですか？' } %></td>
+                    method: :delete, data: { confirm: '作品紹介、またそれに紐づくレビューを全て削除してもよろしいですか？' } %></td>
 
     </tr>
   <% end %>
 </table>
 
 <br>
-<%= link_to '作品追加', new_article_path %>
+<%= link_to '紹介文の追加', new_article_path %>
 <br>
 
 <div class="ribbon">
-  <h3>新しく追加された作品</h3>
+  <h3>新しく追加された作品紹介</h3>
 </div>
 
 <table>
   <tr>
-    <th>タイトル</th>
-    <th>本文</th>
-    <th>投稿時間</th>
+    <th class="作品名">作品名</th>
+    <th class="紹介文">紹介文</th>
+    <th class="投稿時間">投稿時間</th>
   </tr>
   <tr>
   <td><%= @titlelatest.title %></td>
@@ -53,10 +53,10 @@
 
   <table>
   <tr>
-    <th>ユーザー</th>
-    <th>レビュー</th>
-    <th>スター</th>
-    <th>投稿時間</th>
+    <th class="作品名">ユーザー</th>
+    <th class="紹介文">レビュー</th>
+    <th class="スター">スター</th>
+    <th class="投稿時間">投稿時間</th>
   </tr>
   <tr>
   <td><%= @reviewlatest.commenter %></td>

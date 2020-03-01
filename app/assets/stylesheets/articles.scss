@@ -11,26 +11,87 @@
   text-align: center;
 }
 
-.list{
-
-}
-
-table, th, td {
+.tablesize {
   border-collapse: collapse;
-  border: 1px solid #ccc;
-  line-height: 1.5;
+  table-layout: fixed;
 }
 
-table.type06 th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  background: #e6e6e6;
-  color: #ffffff;
+.作品名 {
+  width: 100px;
 }
-table.type06 td {
-  width: 350px;
+
+.紹介文 {
+  width:  400px;
+}
+
+.投稿時間 {
+  width: 100px;
+}
+
+.アクションボタン {
+  width: 200px;
+}
+
+.スター {
+  width: 100px;
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    text-align:center;
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+
+.box3 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: solid 2px #cde4ff;
+    text-align:center;
+}
+.box3 p {
+    margin: 0;
+    padding: 0;
+}
+
+.box5 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #4ec4d3;
+    text-align:center;
+}
+.box5 p {
+    margin: 0;
+    padding: 0;
+}
+
+table th {
   padding: 10px;
-  vertical-align: top;
+  color: skyblue;
+  background: #EEFFFF
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+  border-collapse: collapse;
+  border: solid 2px skyblue;
+  text-align: center;
+}
+
+table th, table td {
+  border: dashed 1px skyblue
 }

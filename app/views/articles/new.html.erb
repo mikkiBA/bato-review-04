@@ -1,10 +1,12 @@
-<h1>新規作品詳細</h1>
+<div class="ribbon">
+<h3>新規作品詳細</h3>
+</div>
+
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 
 <% if @article.errors.any? %>
  <div id="error_explanation">
-   <h2><%= pluralize(@article.errors.count, "error") %> prohibited
-     this article from being saved:</h2>
+   <h2><%= pluralize(@article.errors.count, "エラー") %> があるため、投稿できません:</h2>
    <ul>
    <% @article.errors.full_messages.each do |msg| %>
      <li><%= msg %></li>

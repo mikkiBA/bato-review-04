@@ -1,21 +1,33 @@
-<h2>作品概要</h2>
+<div class="ribbon">
+<h2>作品詳細</h2>
+</div>
 
-<p>
-  <strong>作品名:</strong>
-  <%= @article.title %>
-</p>
+<div class="box2">
+  <p>
+    <strong>作品名:</strong>
+    <%= @article.title %>
+  </p>
+</div>
 
-<p>
-  <strong>紹介文:</strong>
-  <%= @article.text %>
-</p>
+<div class="box3">
+  <p>
+    <strong>紹介文:</strong>
+    <%= @article.text %>
+  </p>
+</div>
 
-<p>
-  <strong>スター平均:</strong>
-  <%= num = @starave.round(1) %>
-</p>
+<div class="box5">
+  <p>
+    <strong>スター平均:</strong>
+    <%= @starave ||= 0
+    num = @starave.round(1) %>
+  </p>
+</div>
 
+<div class="ribbon">
 <h2>レビュー</h2>
+</div>
+
 <% @article.comments.each do |comment| %>
   <p>
     <strong>投稿者:</strong>
@@ -41,7 +53,10 @@
 
 <% end %>
 
-<h2>レビューを投稿する:</h2>
+<div class="ribbon">
+<h4>レビューを投稿する:</h4>
+</div>
+
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
     <%= form.label :投稿者 %><br>

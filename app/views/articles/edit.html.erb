@@ -1,4 +1,6 @@
-<h1>Edit article</h1>
+<div class="ribbon">
+<h3>紹介記事の編集</h3>
+</div>
 
 <%= form_with(model: @article, local: true) do |form| %>
   <% if @article.errors.any? %>
@@ -13,18 +15,18 @@
   </div>
   <% end %>
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :作品名 %><br>
     <%= form.text_field :title %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
+    <%= form.label :紹介文 %><br>
     <%= form.text_area :text %>
   </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit "再投稿"%>
   </p>
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to '一覧へ戻る', articles_path %>
