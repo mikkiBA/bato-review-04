@@ -1,3 +1,36 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.top{
+  background-color: skyblue;
+}
+
+.ribbon{
+  background-color: skyblue;
+  text-align: center;
+}
+
+.list{
+
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+}
+
+table.type06 th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  background: #e6e6e6;
+  color: #ffffff;
+}
+table.type06 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
