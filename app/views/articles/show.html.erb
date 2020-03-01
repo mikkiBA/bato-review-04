@@ -12,11 +12,11 @@
 
 <p>
   <strong>スター平均:</strong>
-
+  <%= num = @starave.round(1) %>
 </p>
 
 <h2>レビュー</h2>
-<% @article.comments.each do |comment| %>
+<% @article.reviews.each do |comment| %>
   <p>
     <strong>投稿者:</strong>
     <%= comment.commenter %>

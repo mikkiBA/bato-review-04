@@ -34,3 +34,33 @@
 </div>
 
 <table>
+  <tr>
+    <th>タイトル</th>
+    <th>本文</th>
+    <th>投稿時間</th>
+  </tr>
+  <tr>
+  <td><%= @titlelatest.title %></td>
+  <td><%= @titlelatest.text %></td>
+  <td><%= @titlelatest.created_at %></td>
+  </tr>
+  </table>
+  <br>
+
+  <div class="ribbon">
+  <h3>最新レビュー</h3>
+  </div>
+
+  <table>
+  <tr>
+    <th>ユーザー</th>
+    <th>レビュー</th>
+    <th>スター</th>
+    <th>投稿時間</th>
+  </tr>
+  <tr>
+  <td><%= @reviewlatest.commenter %></td>
+  <td><%= @reviewlatest.body %></td>
+  <td><%= @reviewlatest.restars %></td>
+  <td><%= @reviewlatest.created_at %></td>
+  </tr>
